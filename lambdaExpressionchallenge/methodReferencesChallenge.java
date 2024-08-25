@@ -8,10 +8,11 @@ class methodReferencesChallenge{
         return StringBuilder(name).reverse().toString();
     }
 
+
     public static void main(String[] args) {
         
         List< UnaryOperator<String> > operators = new ArrayList<>(); 
-
+        
 
         operators.add(
             new UnaryOperator<String>() {

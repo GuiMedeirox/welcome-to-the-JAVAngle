@@ -14,9 +14,7 @@ public class havingFunWithLambdas {
         
         int a1 = Operator( (a, b) -> a + b, 10, 20);
         String s2 = Operator((a, b) -> a.concat(b), "John", "Doe");
-        Float f = Operator((a,b) -> a/b, 10.0f, 5.5f);
-    
-    
+        Float f = Operator( (a,b) -> a/b, 10.0f, 5.5f);
     
     }
 }
