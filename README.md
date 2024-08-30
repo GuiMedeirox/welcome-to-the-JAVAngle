@@ -2,6 +2,6 @@
 
 
 If u wanna to run these codes, please use java 17+.
-Feel free to ask me about anything
+Feel free to ask me about any code here 
 
 > discord : guilherme.java
