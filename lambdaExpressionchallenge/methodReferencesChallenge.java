@@ -5,9 +5,8 @@ import java.util.function.*;
 class methodReferencesChallenge{ 
 
     static String getReverseName(String name){
-        return StringBuilder(name).reverse().toString();
+        return new StringBuilder(name).reverse().toString();
     }
-
 
     public static void main(String[] args) {
         
@@ -31,14 +30,10 @@ class methodReferencesChallenge{
 
 
         operators.forEach(s -> { 
-
             List<String> names = new ArrayList<>(List.of("Bob", "John", "Anna", "Bill"));
-
             names.forEach( n -> {
-                
                 System.out.println(s.apply(n));
             });
-
         });
 
 

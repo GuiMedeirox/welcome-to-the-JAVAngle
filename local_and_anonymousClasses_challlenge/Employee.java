@@ -42,14 +42,13 @@ public record Employee(String name, String lastName, LocalDate hireDate){
         list.forEach( (e) -> employees.add( new CompleteEmployee(e,"fullName") ));
                 
         employees.sort(new Comparator<CompleteEmployee>(){
-        @Override
-        public int compare(CompleteEmployee o1, CompleteEmployee o2) {
-            if(o1.typeSort.equalsIgnoreCase("yearsWorked")){
-                    return o1.yearsWorked - o2.yearsWorked; 
-               } 
-               return o1.fullName.compareTo(o2.fullName);
-            }
-
+            @Override
+            public int compare(CompleteEmployee o1, CompleteEmployee o2) {
+                if(o1.typeSort.equalsIgnoreCase("yearsWorked")){
+                        return o1.yearsWorked - o2.yearsWorked; 
+                } 
+                return o1.fullName.compareTo(o2.fullName);
+                }
         });
         System.out.println(employees);
     }

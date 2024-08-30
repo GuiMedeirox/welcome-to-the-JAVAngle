@@ -1,12 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.function.IntPredicate;
 import java.util.function.IntUnaryOperator;
-import java.util.function.UnaryOperator;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -37,13 +35,13 @@ public class meetingStreams2 {
         .sorted()
         .forEach(s -> System.out.println(s +" "));
 
-        System.out.println("######################################");
+        System.out.println("\n######################################");
 
         Arrays.stream(array)
         .filter(s -> s.toLowerCase().charAt(0) <= 's')
         .forEach(s -> System.out.println(s +" "));
 
-        System.out.println("######################################");
+        System.out.println("\n######################################");
 
         Random rd = new Random();
         Stream.generate(() -> rd.nextInt(100))
@@ -69,6 +67,7 @@ public class meetingStreams2 {
         //     .limit(20)
         //     .filter(n -> n%2==0)
         //     .forEach(System.out::println);
+       
         System.out.println("\n######################################");
 
         IntStream.iterate(1, new IntPredicate() {

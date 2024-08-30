@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -18,8 +19,9 @@ public class Main {
         ));
 
         employees.forEach((e) -> System.out.println(e));
+        System.out.println("------------------------------------------");
+        //Employee.detailedInformations(employees);
 
-        Employee.detailedInformations(employees);
 
 
     }
