@@ -38,19 +38,18 @@ public class meetingStreams4 {
         
         System.out.println("----------------------");
 
-        System.out.println(
-            IntStream.of(1,2,1,3,1,4,1,5,1,6,3)
-            .sum());
-
-        System.out.println(list3);
-    
-    
-        var result = list3.stream()
+        System.out.println(list3.stream()
         .filter(i -> i.isConfirmed == true)
         .peek(s -> System.out.println(s.name))
-        .count(); 
+        .count());
 
-        System.out.println(result);
+        System.out.println("-----------------------");
+        list3.stream()
+            .map(s -> s.row)
+            .peek(System.out::println)
+            .filter(s -> s%2==0)
+            .peek(s -> System.out.println(s +"linha par"))
+            .count();
 
     }
 
