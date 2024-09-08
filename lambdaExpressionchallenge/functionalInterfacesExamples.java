@@ -1,9 +1,11 @@
-import java.util.function.BiConsumer;
-import java.util.function.BiPredicate;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.function.*;
 
-public class consumerExamples {
+public class functionalInterfacesExamples {
+
+    static Random rd = new Random();
+
     public static void main(String[] args) {
 
         Consumer<String> consumer2 = (a1) -> System.out.println(a1.toUpperCase());
@@ -39,6 +41,24 @@ public class consumerExamples {
         System.out.println(predicate2.test(5));
 
         BiPredicate<Integer, String> biPredicate = (a, b) -> a%2 == 0 && b.length()%2==0;
-        
+        System.out.println(biPredicate.test(10,"Avocado"));
+
+        BiPredicate<Integer, String> biPredicate2 = new BiPredicate<Integer, String>() {
+            @Override
+            public boolean test(Integer i, String s) {
+                return i%2!=0  && s.length()%2==0;
+                //return true if I is
+
+            }
+        };
+        System.out.println(biPredicate2.test(rd.nextInt(1,101), "LaMacarena"));
+
+        Supplier<Scanner> getScanner = new Supplier<Scanner>() {
+            @Override
+            public Scanner get() {
+                return null;
+            }
+        };
+
     }
 }

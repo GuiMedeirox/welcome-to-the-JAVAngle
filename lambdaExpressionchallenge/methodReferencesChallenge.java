@@ -13,20 +13,20 @@ class methodReferencesChallenge{
         List< UnaryOperator<String> > operators = new ArrayList<>(); 
         
 
-        operators.add(
-            new UnaryOperator<String>() {
-                @Override
-                public String apply (String s){
-                    return s.toUpperCase(); 
-                }
-            },
-            new UnaryOperator<String>() {
-                @Override
-                public String apply (String s){
-                    return s +" " +getReverseName(s);                     
-                }
-            }
-        );
+//        operators.add(
+//            new UnaryOperator<String>() {
+//                @Override
+//                public String apply (String s){
+//                    return s.toUpperCase();
+//                }
+//            },
+//            new UnaryOperator<String>() {
+//                @Override
+//                public String apply (String s){
+//                    return s +" " +getReverseName(s);
+//                }
+//            }
+//        );
 
 
         operators.forEach(s -> { 
