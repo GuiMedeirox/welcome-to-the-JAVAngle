@@ -34,7 +34,8 @@ public class meetingStreams5 {
         System.out.println("-------------------");
         list.stream()
                 .filter(s -> s.name.equalsIgnoreCase("alice"))
-                .findAny().ifPresentOrElse(System.out::println, () -> System.out.println("there are no people with this name"));
+                .findAny()
+                .ifPresentOrElse(System.out::println, () -> System.out.println("there are no people with this name"));
 
         System.out.println("-------------------");
 

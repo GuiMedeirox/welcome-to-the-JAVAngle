@@ -10,7 +10,7 @@ public class meetingStreams3 {
 
         list.stream()
         .takeWhile(n -> n < 5 )
-        .peek(s -> System.out.println("-> " +s))
+        //.peek(s -> System.out.println("-> " +s))
         .forEach(s -> System.out.println(s +" "));
 
         System.out.println("\n#######################################");
